@@ -58,10 +58,15 @@ def shell(filename, title, description, content):
   </header>
   <main id="contenu">{content}</main>
   <footer class="footer">
-    <div class="container footer-main"><div class="footer-brand"><img src="assets/logo-mark.png" alt="" width="80" height="76" /><div><strong>FARAH PLAST<br />MERROUCHE</strong><span>Fabrication · Broyage · Recyclage</span></div></div><div class="footer-right"><p>Des sacs pour un avenir plus propre.</p><a href="index.html">Accueil ↑</a></div></div>
-    <div class="container footer-bottom"><span>© <span id="year">2026</span> Farah Plast Merrouche. Tous droits réservés.</span><span>Bordj Ghedir · Algérie</span></div>
+    <div class="container footer-main">
+      <div class="footer-about"><div class="footer-brand"><img src="assets/logo-mark.png" alt="" width="80" height="76" /><div><strong>FARAH PLAST<br />MERROUCHE</strong><span>Fabrication · Broyage · Recyclage</span></div></div><p>Depuis Bordj Ghedir, nous fabriquons des sacs plastiques et valorisons la matière pour lui donner de nouvelles possibilités.</p><span class="footer-location">Bordj Ghedir · Algérie</span></div>
+      <div class="footer-column"><h2>Explorer</h2><a href="index.html">Accueil</a><a href="apropos.html">À propos</a><a href="services.html">Nos services</a><a href="demarche.html">Notre démarche</a><a href="galerie.html">Galerie</a></div>
+      <div class="footer-column"><h2>Nos activités</h2><a href="services.html#fabrication">Fabrication de sacs</a><a href="services.html#recyclage">Broyage & recyclage</a><a href="services.html#injection">Injection plastique <small>À venir</small></a><a href="contact.html">Demander un devis</a></div>
+      <div class="footer-column footer-contact"><h2>Parlons de votre projet</h2><p>Une question sur nos produits ou sur la matière plastique ? Contactez notre équipe.</p><a href="tel:+21335206729">035 20 67 29</a><a href="mailto:farahplastmerrouche@gmail.com">farahplastmerrouche@gmail.com</a><a class="footer-cta" href="contact.html">Nous contacter ↗</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year">2026</span> Farah Plast Merrouche. Tous droits réservés.</span><a href="https://sitemagique.com" target="_blank" rel="noopener noreferrer">Developed by <strong>SITEMAGIQUE</strong> ↗</a></div>
   </footer>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=2" defer></script>
 </body>
 </html>
 '''
@@ -92,17 +97,28 @@ services = hero(
     "films-colores.webp", ("Demander un renseignement", "contact.html"),
 ) + '''<section class="section"><div class="container"><div class="center-heading"><div class="eyebrow"><span class="eyebrow-line"></span>NOTRE SAVOIR-FAIRE</div><h2>Trois domaines, <em>une même exigence.</em></h2><p>Chaque projet commence par un échange sur les besoins, les usages et la matière.</p></div>
   <div class="service-detail" id="fabrication"><img src="assets/ligne-sacs.webp" alt="Ligne de fabrication de sacs plastiques" /><div><span class="detail-number">01 · PRODUCTION</span><h2>Fabrication de sacs <em>plastiques</em></h2><p>Notre atelier réalise des sacs et emballages plastiques destinés à différents usages. Nous étudions les besoins de format, de couleur et d’utilisation afin de proposer une solution adaptée.</p><ul><li>Sacs plastiques selon les besoins du client</li><li>Échanges sur les formats et l’utilisation</li><li>Production dans notre atelier à Bordj Ghedir</li></ul>''' + button("Discuter de votre besoin", "contact.html") + '''</div></div>
-  <div class="service-detail reverse" id="recyclage"><img src="assets/broyeur.webp" alt="Équipement de broyage de matières plastiques" /><div><span class="detail-number">02 · VALORISATION</span><h2>Broyage & <em>recyclage</em></h2><p>Nous récupérons et broyons des déchets plastiques pour préparer une matière pouvant rejoindre de nouveaux cycles d’utilisation. La préparation est pensée selon la nature de la matière et les besoins exprimés.</p><ul><li>Collecte de matières plastiques à valoriser</li><li>Broyage et préparation</li><li>Échange sur les caractéristiques de la matière</li></ul>''' + button("Échanger sur la matière", "contact.html") + '''</div></div>
+  <div class="service-detail reverse" id="recyclage"><div class="rotated-photo"><img src="assets/broyeur.webp" alt="Équipement de broyage de matières plastiques" /></div><div><span class="detail-number">02 · VALORISATION</span><h2>Broyage & <em>recyclage</em></h2><p>Nous récupérons et broyons des déchets plastiques pour préparer une matière pouvant rejoindre de nouveaux cycles d’utilisation. La préparation est pensée selon la nature de la matière et les besoins exprimés.</p><ul><li>Collecte de matières plastiques à valoriser</li><li>Broyage et préparation</li><li>Échange sur les caractéristiques de la matière</li></ul>''' + button("Échanger sur la matière", "contact.html") + '''</div></div>
   <div class="service-detail" id="injection"><img src="assets/paillettes-plastique.webp" alt="Fragments de plastique préparés pour la transformation" /><div><span class="detail-number">03 · PROJET À VENIR</span><h2>Injection <em>plastique</em></h2><p>L’injection plastique est une perspective de développement pour l’entreprise. Cette activité n’est pas encore proposée comme service. Elle reflète notre volonté d’élargir progressivement nos possibilités de transformation.</p>''' + button("Suivre notre évolution", "contact.html") + '''</div></div>
 </div></section>'''
+
+roadmap_steps = [
+    ("Collecter", "Récupérer les matières plastiques destinées à être valorisées."),
+    ("Identifier la matière", "Repérer ses caractéristiques pour orienter la préparation dans l’atelier."),
+    ("Organiser", "Regrouper les matières selon leur nature et les besoins de transformation."),
+    ("Broyer", "Transformer les plastiques en fragments à l’aide des équipements de l’atelier."),
+    ("Préparer", "Présenter la matière broyée selon ses caractéristiques et sa destination."),
+    ("Valoriser", "Permettre à la matière préparée de rejoindre de nouveaux cycles d’utilisation."),
+]
+roadmap_cards = "".join(
+    f'<article class="roadmap-step"><div class="roadmap-card"><span>{number:02d}</span><h3>{title}</h3><p>{copy}</p></div><i class="roadmap-node" aria-hidden="true"></i></article>'
+    for number, (title, copy) in enumerate(roadmap_steps, 1)
+)
 
 process = hero(
     "NOTRE DÉMARCHE", "Donner une nouvelle<br /><em>valeur à la matière.</em>",
     "De la récupération à la préparation, nous avançons étape par étape pour faire de la matière plastique usagée une ressource utile.",
     "operateur-recyclage.webp", ("Découvrir nos services", "services.html"),
-) + '''<section class="section"><div class="container"><div class="center-heading"><div class="eyebrow"><span class="eyebrow-line"></span>UNE CHAÎNE DE VALORISATION</div><h2>Une démarche <em>concrète.</em></h2><p>La valorisation commence par une bonne compréhension de la matière, puis par sa préparation dans l’atelier.</p></div>
-  <div class="steps-grid"><article><span>01</span><h3>Collecter</h3><p>Récupérer les déchets plastiques destinés à une nouvelle utilisation.</p></article><article><span>02</span><h3>Broyer</h3><p>Réduire la matière à l’aide des équipements de notre atelier.</p></article><article><span>03</span><h3>Préparer</h3><p>Organiser la matière broyée selon ses caractéristiques et les besoins visés.</p></article><article><span>04</span><h3>Valoriser</h3><p>Permettre à la matière préparée d’entrer dans de nouveaux usages de production.</p></article></div>
-</div></section>
+) + '''<section class="roadmap-section" aria-labelledby="roadmap-page-title"><div class="container"><div class="roadmap-heading"><div class="eyebrow"><span class="eyebrow-line"></span>NOTRE DÉMARCHE</div><h2 id="roadmap-page-title">Faire de la matière usagée une <em>ressource utile.</em></h2><p>Un parcours clair, de la collecte à la préparation de la matière plastique pour de nouveaux usages.</p></div><div class="roadmap" data-roadmap><div class="roadmap-line" aria-hidden="true"><span class="roadmap-fill"></span><span class="roadmap-ball"></span></div><div class="roadmap-list">''' + roadmap_cards + '''</div></div></div></section>
 <section class="section section-tint"><div class="container feature-split"><div class="feature-media"><img src="assets/matiere-broyee.webp" alt="Matière plastique broyée dans l'atelier" /></div><div class="feature-copy"><div class="eyebrow"><span class="eyebrow-line"></span>NOTRE ATELIER</div><h2>La transformation se voit <em>sur le terrain.</em></h2><p class="lead">Nos équipes interviennent directement sur les matières et les équipements.</p><p>Nous cherchons à préparer la matière de façon cohérente avec sa nature et sa destination. Cette démarche accompagne notre activité de fabrication et notre projet de développement.</p>''' + button("Voir les ateliers", "galerie.html") + '''</div></div></section>'''
 
 photos = [
@@ -142,7 +158,13 @@ contact = hero(
       <button class="button button-dark" type="submit">Envoyer mon message <span aria-hidden="true">↗</span></button>
     </form>
   </div>
-  <aside class="contact-page-aside"><h3>Nos coordonnées</h3><div class="contact-fact"><span>ADRESSE</span><p>10 Rue Ben Badis, Bordj Ghedir 34004<br />Bordj Bou Arréridj, Algérie</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Farah+Plast+Merrouche+Bordj+Ghedir" target="_blank" rel="noopener noreferrer">Voir sur la carte ↗</a></div><div class="contact-fact"><span>TÉLÉPHONE</span><p><a href="tel:+21335206729">035 20 67 29</a><br /><a href="tel:+213552439760">0552 43 97 60</a><br /><a href="tel:+213779384252">0779 38 42 52</a></p></div><div class="contact-fact"><span>E-MAIL</span><p><a href="mailto:farahplastmerrouche@gmail.com">farahplastmerrouche@gmail.com</a><br /><a href="mailto:merroucheadel22@gmail.com">merroucheadel22@gmail.com</a></p></div><div class="contact-fact"><span>HORAIRES</span><p>Samedi — jeudi · 6h à 18h</p></div></aside>
+  <aside class="contact-page-aside">
+    <div class="contact-aside-head"><span>RESTONS EN CONTACT</span><h3>Nos coordonnées</h3><p>Choisissez le moyen le plus simple pour nous joindre.</p></div>
+    <div class="contact-fact"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><span>ADRESSE</span><p>10 Rue Ben Badis, Bordj Ghedir 34004<br />Bordj Bou Arréridj, Algérie</p><a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Farah+Plast+Merrouche+Bordj+Ghedir" target="_blank" rel="noopener noreferrer">Voir sur la carte ↗</a></div></div>
+    <div class="contact-fact"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 2.5h3l1.4 4.2-2 1.6a16 16 0 0 0 6.7 6.7l1.6-2 4.2 1.4v3a3 3 0 0 1-3.3 3A18.5 18.5 0 0 1 3.6 5.8a3 3 0 0 1 3-3.3Z"/></svg></div><div><span>TÉLÉPHONE</span><p><a href="tel:+21335206729">035 20 67 29</a><br /><a href="tel:+213552439760">0552 43 97 60</a><br /><a href="tel:+213779384252">0779 38 42 52</a></p></div></div>
+    <div class="contact-fact"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></div><div><span>E-MAIL</span><p><a href="mailto:farahplastmerrouche@gmail.com">farahplastmerrouche@gmail.com</a><br /><a href="mailto:merroucheadel22@gmail.com">merroucheadel22@gmail.com</a></p></div></div>
+    <div class="contact-fact"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><div><span>HORAIRES</span><p>Samedi — jeudi<br />6h à 18h</p></div></div>
+  </aside>
 </div></section>'''
 
 thanks = '''<section class="thankyou"><div class="container"><div class="eyebrow"><span class="eyebrow-line"></span>CONTACT</div><h1>Merci pour votre <em>message.</em></h1><p>Votre demande a été transmise. Nous vous répondrons dès que possible.</p>''' + button("Retour à l'accueil", "index.html") + '</div></section>'
