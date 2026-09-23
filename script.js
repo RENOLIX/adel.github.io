@@ -39,10 +39,17 @@ if (roadmaps.length) {
   let framePending = false;
   const updateRoadmaps = () => {
     roadmaps.forEach((roadmap) => {
+      const path = roadmap.querySelector('.roadmap-path');
+      const ball = roadmap.querySelector('.roadmap-ball');
+      if (!path) return;
+      const length = path.getTotalLength();
       const bounds = roadmap.getBoundingClientRect();
-      const trigger = window.innerHeight * 0.72;
-      const progress = Math.max(0, Math.min(1, (trigger - bounds.top) / bounds.height));
-      roadmap.style.setProperty('--draw-progress', `${Math.round(progress * 100)}%`);
+      const start = window.innerHeight / 2;
+      const distance = Math.max(1, bounds.height - start);
+      const progress = Math.max(0, Math.min(1, (start - bounds.top) / distance));
+      path.style.strokeDasharray = String(length);
+      path.style.strokeDashoffset = String(length * (1 - progress));
+      if (ball) ball.style.opacity = progress > 0 && progress < 1 ? '0' : '1';
     });
     framePending = false;
   };

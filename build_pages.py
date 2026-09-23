@@ -44,7 +44,7 @@ def shell(filename, title, description, content):
   <meta name="description" content="{description}" />
   <title>{title} — Farah Plast Merrouche</title>
   <link rel="icon" type="image/png" href="assets/logo-mark.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -66,7 +66,7 @@ def shell(filename, title, description, content):
     </div>
     <div class="container footer-bottom"><span>© <span id="year">2026</span> Farah Plast Merrouche. Tous droits réservés.</span><a href="https://sitemagique.com" target="_blank" rel="noopener noreferrer">Developed by <strong>SITEMAGIQUE</strong> ↗</a></div>
   </footer>
-  <script src="script.js?v=2" defer></script>
+  <script src="script.js?v=3" defer></script>
 </body>
 </html>
 '''
@@ -110,7 +110,7 @@ roadmap_steps = [
     ("Valoriser", "Permettre à la matière préparée de rejoindre de nouveaux cycles d’utilisation."),
 ]
 roadmap_cards = "".join(
-    f'<article class="roadmap-step"><div class="roadmap-card"><span>{number:02d}</span><h3>{title}</h3><p>{copy}</p></div><i class="roadmap-node" aria-hidden="true"></i></article>'
+    f'<article class="roadmap-step"><div class="roadmap-card"><span>{number:02d}</span><h3>{title}</h3><p>{copy}</p></div></article>'
     for number, (title, copy) in enumerate(roadmap_steps, 1)
 )
 
@@ -118,7 +118,7 @@ process = hero(
     "NOTRE DÉMARCHE", "Donner une nouvelle<br /><em>valeur à la matière.</em>",
     "De la récupération à la préparation, nous avançons étape par étape pour faire de la matière plastique usagée une ressource utile.",
     "operateur-recyclage.webp", ("Découvrir nos services", "services.html"),
-) + '''<section class="roadmap-section" aria-labelledby="roadmap-page-title"><div class="container"><div class="roadmap-heading"><div class="eyebrow"><span class="eyebrow-line"></span>NOTRE DÉMARCHE</div><h2 id="roadmap-page-title">Faire de la matière usagée une <em>ressource utile.</em></h2><p>Un parcours clair, de la collecte à la préparation de la matière plastique pour de nouveaux usages.</p></div><div class="roadmap" data-roadmap><div class="roadmap-line" aria-hidden="true"><span class="roadmap-fill"></span><span class="roadmap-ball"></span></div><div class="roadmap-list">''' + roadmap_cards + '''</div></div></div></section>
+) + '''<section class="roadmap-section" aria-labelledby="roadmap-page-title"><div class="container"><div class="roadmap-heading"><div class="eyebrow"><span class="eyebrow-line"></span>NOTRE DÉMARCHE</div><h2 id="roadmap-page-title">Faire de la matière usagée une <em>ressource utile.</em></h2><p>Un parcours clair, de la collecte à la préparation de la matière plastique pour de nouveaux usages.</p></div><div class="roadmap" data-roadmap><div class="roadmap-line" aria-hidden="true"><span class="roadmap-ball"></span><svg viewBox="0 0 52 2047" fill="none"><path class="roadmap-path" d="M26 0V314C12 314 1 326 1 339C1 352 11 364 26 364C41 364 51 353 51 339C51 325 28 318 26 339V636V654.5C13.5 654.5 1 664 1 679C1 694 12 703 26 703C40 703 50.5 692.5 50.5 679C49.2307 664.367 26 660 26 679V979V994.5C13.5 994.5 0.999993 1003.5 1 1019C1.00001 1034.5 12.3457 1044.15 26 1043.5C36.5163 1043 50.4852 1035.18 50.5 1019C50.5148 1002.82 28.4963 1000.64 26 1019V1327C26 1327 26 1333.7 26 1338C13 1338 1 1348.5 1 1363C1 1377.5 13.5 1388 26 1388C38.5 1388 50.9422 1381.19 51 1363C51.0578 1344.81 26 1346 26 1363C26 1380 26 1670 26 1670V1678.5C12.5 1678.5 1 1687.5 1 1703C1 1718.5 14 1727.5 26 1727.5C38 1727.5 50.5 1719 50.5 1703C50.5 1687 26 1687 26 1703C26 1719 26 2049 26 2049" /></svg></div><div class="roadmap-list">''' + roadmap_cards + '''</div></div></div></section>
 <section class="section section-tint"><div class="container feature-split"><div class="feature-media"><img src="assets/matiere-broyee.webp" alt="Matière plastique broyée dans l'atelier" /></div><div class="feature-copy"><div class="eyebrow"><span class="eyebrow-line"></span>NOTRE ATELIER</div><h2>La transformation se voit <em>sur le terrain.</em></h2><p class="lead">Nos équipes interviennent directement sur les matières et les équipements.</p><p>Nous cherchons à préparer la matière de façon cohérente avec sa nature et sa destination. Cette démarche accompagne notre activité de fabrication et notre projet de développement.</p>''' + button("Voir les ateliers", "galerie.html") + '''</div></div></section>'''
 
 photos = [
