@@ -43,7 +43,7 @@ def shell(filename, title, description, content):
   <meta name="theme-color" content="#10253b" />
   <meta name="description" content="{description}" />
   <title>{title} — Farah Plast Merrouche</title>
-  <link rel="icon" type="image/png" href="assets/logo-mark.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
